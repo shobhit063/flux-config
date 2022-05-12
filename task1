@@ -1,0 +1,5 @@
+if [ -z "$1" ];
+then echo "URL is empty"
+else
+echo "Response code: " $(curl -sI $1 | grep HTTP | grep -oe '\d\d\d')
+fi
