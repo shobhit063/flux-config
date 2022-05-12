@@ -1,0 +1,39 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "secretsmanager:DescribeSecret",
+                "secretsmanager:DeleteResourcePolicy",
+                "secretsmanager:PutSecretValue",
+                "secretsmanager:CreateSecret",
+                "secretsmanager:DeleteSecret",
+                "secretsmanager:CancelRotateSecret",
+                "secretsmanager:ListSecretVersionIds",
+                "secretsmanager:UpdateSecret",
+                "secretsmanager:GetResourcePolicy",
+                "secretsmanager:GetSecretValue",
+                "secretsmanager:StopReplicationToReplica",
+                "secretsmanager:PutResourcePolicy",
+                "secretsmanager:ReplicateSecretToRegions",
+                "secretsmanager:RestoreSecret",
+                "secretsmanager:RotateSecret",
+                "secretsmanager:UpdateSecretVersionStage",
+                "secretsmanager:ValidateResourcePolicy",
+                "secretsmanager:RemoveRegionsFromReplication"
+            ],
+            "Resource": "arn:aws:secretsmanager:us-east-1:000011112222:secret:staging/App1-Secret-*"
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": [
+                "secretsmanager:GetRandomPassword",
+                "secretsmanager:ListSecrets"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
